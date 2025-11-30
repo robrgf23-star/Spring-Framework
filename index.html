@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Framework - Características y Funcionalidades</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6db33f 0%, #4a7b35 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Navegación */
+        nav {
+            background-color: #343a40;
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #6db33f;
+        }
+        
+        /* Secciones */
+        section {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: #4a7b35;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        h3 {
+            color: #6db33f;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Listas */
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Tarjetas de características */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6db33f;
+            padding: 1.5rem;
+            border-radius: 4px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Spring Framework</div>
+            <div class="tagline">El framework más popular para el desarrollo de aplicaciones Java</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#caracteristicas">Características Principales</a></li>
+                <li><a href="#modulos">Módulos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducción a Spring Framework</h2>
+            <p>Spring Framework es un framework de código abierto para el desarrollo de aplicaciones empresariales en Java. Creado por Rod Johnson en 2003, se ha convertido en el estándar de facto para el desarrollo de aplicaciones Java empresariales.</p>
+            <p>Spring simplifica el desarrollo de aplicaciones Java mediante el uso de principios de programación como la Inversión de Control (IoC) y la Inyección de Dependencias (DI), promoviendo las mejores prácticas de diseño y arquitectura.</p>
+        </section>
+        
+        <section id="caracteristicas">
+            <h2>Características Principales de Spring Framework</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Inversión de Control (IoC)</h3>
+                    <p>Spring gestiona el ciclo de vida y las dependencias de los objetos a través de su contenedor IoC, eliminando la necesidad de crear manualmente y conectar objetos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Inyección de Dependencias (DI)</h3>
+                    <p>Permite inyectar dependencias en los objetos, lo que facilita el código desacoplado, testeable y mantenible.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Programación Orientada a Aspectos (AOP)</h3>
+                    <p>Permite separar preocupaciones transversales (como logging, seguridad, transacciones) del código de negocio principal.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Spring MVC</h3>
+                    <p>Framework web robusto para construir aplicaciones web siguiendo el patrón Modelo-Vista-Controlador.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Acceso a Datos Simplificado</h3>
+                    <p>Proporciona abstracciones para trabajar con diferentes tecnologías de persistencia como JDBC, JPA, Hibernate, etc.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Gestión de Transacciones</h3>
+                    <p>Ofrece un modelo de transacciones declarativo que simplifica la gestión de transacciones en aplicaciones empresariales.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="modulos">
+            <h2>Módulos Principales de Spring Framework</h2>
+            
+            <h3>Core Container</h3>
+            <p>Es el módulo fundamental que proporciona la funcionalidad de Inversión de Control (IoC) y Inyección de Dependencias (DI). Incluye:</p>
+            <ul>
+                <li><strong>spring-core</strong>: Funcionalidades básicas de IoC</li>
+                <li><strong>spring-beans</strong>: Implementación del patrón Factory</li>
+                <li><strong>spring-context</strong>: Contexto de aplicación y características empresariales</li>
+                <li><strong>spring-expression</strong> (SpEL): Lenguaje de expresión para consultar y manipular objetos en tiempo de ejecución</li>
+            </ul>
+            
+            <h3>AOP y Instrumentación</h3>
+            <p>Proporciona implementación de Programación Orientada a Aspectos y capacidades de instrumentación de clases.</p>
+            
+            <h3>Spring Web</h3>
+            <p>Módulos para desarrollo web:</p>
+            <ul>
+                <li><strong>spring-web</strong>: Funcionalidades web básicas</li>
+                <li><strong>spring-webmvc</strong>: Implementación del patrón MVC</li>
+                <li><strong>spring-websocket</strong>: Soporte para WebSocket</li>
+            </ul>
+            
+            <h3>Data Access/Integration</h3>
+            <p>Módulos para acceso a datos e integración:</p>
+            <ul>
+                <li><strong>spring-jdbc</strong>: JDBC simplificado</li>
+                <li><strong>spring-orm</strong>: Integración con ORMs (Hibernate, JPA, etc.)</li>
+                <li><strong>spring-transactions</strong>: Gestión de transacciones</li>
+            </ul>
+            
+            <h3>Test</h3>
+            <p>Spring Testing Framework que permite realizar pruebas unitarias e integrales con soporte para JUnit y TestNG.</p>
+        </section>
+        
+        <section id="beneficios">
+            <h2>Beneficios de Usar Spring Framework</h2>
+            
+            <h3>Productividad</h3>
+            <p>Spring simplifica muchas tareas complejas de Java EE, permitiendo a los desarrolladores enfocarse en la lógica de negocio en lugar de la infraestructura.</p>
+            
+            <h3>Flexibilidad</h3>
+            <p>Spring es no intrusivo y permite usar solo las partes que necesitas. No fuerza una arquitectura particular y se integra bien con otras tecnologías.</p>
+            
+            <h3>Testabilidad</h3>
+            <p>La inyección de dependencias facilita la creación de pruebas unitarias, permitiendo mockear dependencias fácilmente.</p>
+            
+            <h3>Comunidad y Ecosistema</h3>
+            <p>Spring cuenta con una gran comunidad y un ecosistema extenso que incluye Spring Boot, Spring Security, Spring Data, y muchos otros proyectos.</p>
+            
+            <h3>Arquitectura Modular</h3>
+            <p>Puedes elegir los módulos que necesitas para tu aplicación, manteniendo la aplicación ligera y enfocada.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Página informativa sobre Spring Framework - Proyecto para GitHub</p>
+            <p>Desarrollado con HTML, CSS y JavaScript</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Efecto de aparición para las tarjetas al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Aplicar el efecto a las tarjetas de características
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
